@@ -48,15 +48,15 @@ class Viking(Soldier): #El vikingo es un tipo de soldado, comparte. Hija
 #El viernes me daba mal por la puta IDENTACIÓN. No desesperarr
 '''
 class Viking(Soldier):
-    name = ''
+
     def name(self):
-        self.name= "Petrus"
+        self.name= ""
         
-    def receiveDamage(self, damage): #metodo
-        self.health -= self.health -damage
+    def receiveDamage(self, damage): #metodo. Acciones que hacen los Kiking
+        self.health -= damage
             
         if self.health > 0: 
-            return f"{self.name}, 'has received', {self.damage}, 'points of damage'"
+            return f'{self.name}, has received {self.damage} points of damage'
             
         else: 
             return f"{self.name}, 'has has died in combat'"
@@ -69,17 +69,15 @@ class Viking(Soldier):
 
 
 class Saxon(Soldier):
-    def __init__(self, health,strenth):
-        Soldier().__init(health,strenght)
         
     def receiveDamage(self,damage):
         self.damage=damage
         self.health=self.health - damage
         
         if self.health > 0:
-            return'A saxon has received', damage, 'points of damage'
+            return f"A Saxon has received {damage} points of damage"
         else:
-            return 'A saxon has died in combat'
+            return 'A Saxon has died in combat'
 
 # War
 
